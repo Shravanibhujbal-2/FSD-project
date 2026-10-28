@@ -1,0 +1,31 @@
+/* Student Result Portal - CSS */
+body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #4f46e5, #06b6d4); padding: 20px; min-height: 100vh; margin: 0; }
+
+.box { width: 340px; margin: 30px auto; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
+.wide { width: 650px; max-width: 90%; }
+.box h2 { text-align: center; color: #4f46e5; margin-top: 0; }
+.center { text-align: center; }
+
+/* Form */
+label { font-size: 14px; }
+input[type=text], input[type=email], input[type=password] {
+    width: 100%; padding: 9px; margin: 5px 0 14px 0; border: 1px solid #aaa; border-radius: 5px; box-sizing: border-box;
+}
+input[type=submit] { width: 100%; padding: 10px; background: #4f46e5; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+input[type=submit]:hover { background: #3730a3; }
+
+/* Messages and links */
+.msg { text-align: center; color: #b91c1c; }
+.link { text-align: center; font-size: 14px; }
+a { color: #4f46e5; text-decoration: none; }
+
+/* Dashboard */
+.top { background: #4f46e5; color: white; padding: 12px 18px; border-radius: 6px; margin-bottom: 15px; }
+.top h3 { margin: 0 0 5px 0; }
+.top a { color: #fde68a; font-weight: bold; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 9px; text-align: left; }
+th { background: #4f46e5; color: white; }
+.pass { color: green; font-weight: bold; }
+.fail { color: red; font-weight: bold; }
+.summary { margin-top: 18px; padding: 5px 18px; background: #eef2ff; border-left: 5px solid #4f46e5; }

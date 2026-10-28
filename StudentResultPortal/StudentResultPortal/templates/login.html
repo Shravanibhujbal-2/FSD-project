@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="box">
+<h2>Student Result Portal</h2>
+<h3 class="center">Login</h3>
+
+<form method="POST">
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Password:</label>
+    <input type="password" name="password" required>
+
+    <input type="submit" value="Login">
+</form>
+
+<h4 class="msg">{{ msg }}</h4>
+
+<p class="link">New student? <a href="/">Register</a></p>
+</div>
+</body>
+</html>

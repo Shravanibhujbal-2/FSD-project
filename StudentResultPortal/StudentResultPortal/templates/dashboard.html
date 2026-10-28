@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="box wide">
+
+<div class="top">
+    <h3>Welcome, {{ name }}!</h3>
+    <p>Roll No: {{ roll_no }}</p>
+    <p><a href="/logout">Logout</a></p>
+</div>
+
+<h2>Student Result</h2>
+
+{% if results %}
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Marks (out of 100)</th>
+        <th>Status</th>
+    </tr>
+    {% for r in results %}
+    <tr>
+        <td>{{ r[0] }}</td>
+        <td>{{ r[1] }}</td>
+        {% if r[1] >= 40 %}
+        <td class="pass">Pass</td>
+        {% else %}
+        <td class="fail">Fail</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="summary">
+    <p>Total Marks: <b>{{ total }} / {{ max_total }}</b></p>
+    <p>Percentage: <b>{{ percentage }} %</b></p>
+    <p>Final Result:
+        {% if final == "PASS" %}
+        <span class="pass">PASS</span>
+        {% else %}
+        <span class="fail">FAIL</span>
+        {% endif %}
+    </p>
+</div>
+
+{% else %}
+<h4 class="msg">No result found for your Roll No.</h4>
+{% endif %}
+
+</div>
+</body>
+</html>
